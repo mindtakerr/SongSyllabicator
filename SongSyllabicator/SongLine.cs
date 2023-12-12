@@ -75,5 +75,10 @@ namespace SongSyllabicator
         {
             return Starter + " " + StartingTime + " " + NoteLength + " " + NoteValue + " " + Syllable;
         }
+
+        public static string LineBreak(int BreakBeat)
+        {
+            return "- " + BreakBeat;
+        }
     }
 }

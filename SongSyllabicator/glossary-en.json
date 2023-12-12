@@ -118,6 +118,12 @@
     ]
   },
   {
+    "Word": "age",
+    "Syllables": [
+      "age"
+    ]
+  },
+  {
     "Word": "aggressive",
     "Syllables": [
       "ag",
@@ -880,6 +886,13 @@
     ]
   },
   {
+    "Word": "castles",
+    "Syllables": [
+      "cas",
+      "tles"
+    ]
+  },
+  {
     "Word": "catch",
     "Syllables": [
       "catch"
@@ -1166,6 +1179,12 @@
     ]
   },
   {
+    "Word": "coun",
+    "Syllables": [
+      "coun"
+    ]
+  },
+  {
     "Word": "courage",
     "Syllables": [
       "cour",
@@ -1216,6 +1235,12 @@
     "Word": "crossed",
     "Syllables": [
       "crossed"
+    ]
+  },
+  {
+    "Word": "crowd",
+    "Syllables": [
+      "crowd"
     ]
   },
   {
@@ -1315,6 +1340,12 @@
   },
   {
     "Word": "day",
+    "Syllables": [
+      "day"
+    ]
+  },
+  {
+    "Word": "day?",
     "Syllables": [
       "day"
     ]
@@ -2323,6 +2354,12 @@
     ]
   },
   {
+    "Word": "ger",
+    "Syllables": [
+      "ger"
+    ]
+  },
+  {
     "Word": "gered",
     "Syllables": [
       "gered"
@@ -2505,6 +2542,12 @@
     ]
   },
   {
+    "Word": "gon",
+    "Syllables": [
+      "gon"
+    ]
+  },
+  {
     "Word": "gone",
     "Syllables": [
       "gone"
@@ -2572,6 +2615,19 @@
     "Word": "ground",
     "Syllables": [
       "ground"
+    ]
+  },
+  {
+    "Word": "grow",
+    "Syllables": [
+      "grow"
+    ]
+  },
+  {
+    "Word": "growing",
+    "Syllables": [
+      "grow",
+      "ing"
     ]
   },
   {
@@ -3323,6 +3379,13 @@
     ]
   },
   {
+    "Word": "lazy",
+    "Syllables": [
+      "la",
+      "zy"
+    ]
+  },
+  {
     "Word": "le",
     "Syllables": [
       "le"
@@ -3507,6 +3570,21 @@
     "Syllables": [
       "li",
       "on"
+    ]
+  },
+  {
+    "Word": "listen",
+    "Syllables": [
+      "lis",
+      "ten"
+    ]
+  },
+  {
+    "Word": "listening",
+    "Syllables": [
+      "lis",
+      "ten",
+      "ing"
     ]
   },
   {
@@ -4175,6 +4253,12 @@
     ]
   },
   {
+    "Word": "news",
+    "Syllables": [
+      "news"
+    ]
+  },
+  {
     "Word": "next",
     "Syllables": [
       "next"
@@ -4222,6 +4306,12 @@
     "Word": "not",
     "Syllables": [
       "not"
+    ]
+  },
+  {
+    "Word": "noth",
+    "Syllables": [
+      "noth"
     ]
   },
   {
@@ -4961,6 +5051,13 @@
     ]
   },
   {
+    "Word": "rounding",
+    "Syllables": [
+      "round",
+      "ing"
+    ]
+  },
+  {
     "Word": "routine",
     "Syllables": [
       "rou",
@@ -4990,6 +5087,12 @@
     "Word": "sack",
     "Syllables": [
       "sack"
+    ]
+  },
+  {
+    "Word": "sad",
+    "Syllables": [
+      "sad"
     ]
   },
   {
@@ -5425,6 +5528,12 @@
     ]
   },
   {
+    "Word": "smile",
+    "Syllables": [
+      "smile"
+    ]
+  },
+  {
     "Word": "sneaks",
     "Syllables": [
       "sneaks"
@@ -5542,6 +5651,12 @@
     "Word": "sound",
     "Syllables": [
       "sound"
+    ]
+  },
+  {
+    "Word": "sounds",
+    "Syllables": [
+      "sounds"
     ]
   },
   {
@@ -5808,6 +5923,12 @@
     ]
   },
   {
+    "Word": "sur",
+    "Syllables": [
+      "sur"
+    ]
+  },
+  {
     "Word": "sure",
     "Syllables": [
       "sure"
@@ -5848,6 +5969,12 @@
     "Word": "swim",
     "Syllables": [
       "swim"
+    ]
+  },
+  {
+    "Word": "ta",
+    "Syllables": [
+      "ta"
     ]
   },
   {
@@ -6776,6 +6903,12 @@
     ]
   },
   {
+    "Word": "whoa!",
+    "Syllables": [
+      "whoa!"
+    ]
+  },
+  {
     "Word": "why",
     "Syllables": [
       "why"
@@ -6855,6 +6988,12 @@
     "Word": "woah",
     "Syllables": [
       "woah"
+    ]
+  },
+  {
+    "Word": "woah!",
+    "Syllables": [
+      "woah!"
     ]
   },
   {
@@ -7059,6 +7198,272 @@
     "Word": "zim",
     "Syllables": [
       "zim"
+    ]
+  },
+  {
+    "Word": "old",
+    "Syllables": [
+      "old"
+    ]
+  },
+  {
+    "Word": "voice",
+    "Syllables": [
+      "voice"
+    ]
+  },
+  {
+    "Word": "filled",
+    "Syllables": [
+      "filled"
+    ]
+  },
+  {
+    "Word": "going",
+    "Syllables": [
+      "go",
+      "ing"
+    ]
+  },
+  {
+    "Word": "fight",
+    "Syllables": [
+      "fight"
+    ]
+  },
+  {
+    "Word": "country",
+    "Syllables": [
+      "coun",
+      "try"
+    ]
+  },
+  {
+    "Word": "foreign",
+    "Syllables": [
+      "for",
+      "eign"
+    ]
+  },
+  {
+    "Word": "hurt",
+    "Syllables": [
+      "hurt"
+    ]
+  },
+  {
+    "Word": "harmed",
+    "Syllables": [
+      "harmed"
+    ]
+  },
+  {
+    "Word": "anyone",
+    "Syllables": [
+      "an",
+      "y",
+      "one"
+    ]
+  },
+  {
+    "Word": "must",
+    "Syllables": [
+      "must"
+    ]
+  },
+  {
+    "Word": "stare",
+    "Syllables": [
+      "stare"
+    ]
+  },
+  {
+    "Word": "win",
+    "Syllables": [
+      "win"
+    ]
+  },
+  {
+    "Word": "burn",
+    "Syllables": [
+      "burn"
+    ]
+  },
+  {
+    "Word": "seen",
+    "Syllables": [
+      "seen"
+    ]
+  },
+  {
+    "Word": "die",
+    "Syllables": [
+      "die"
+    ]
+  },
+  {
+    "Word": "tough",
+    "Syllables": [
+      "tough"
+    ]
+  },
+  {
+    "Word": "sailing",
+    "Syllables": [
+      "sail",
+      "ing"
+    ]
+  },
+  {
+    "Word": "uncle",
+    "Syllables": [
+      "un",
+      "cle"
+    ]
+  },
+  {
+    "Word": "sam's",
+    "Syllables": [
+      "sam's"
+    ]
+  },
+  {
+    "Word": "kill",
+    "Syllables": [
+      "kill"
+    ]
+  },
+  {
+    "Word": "enemy",
+    "Syllables": [
+      "en",
+      "e",
+      "my"
+    ]
+  },
+  {
+    "Word": "streets",
+    "Syllables": [
+      "streets"
+    ]
+  },
+  {
+    "Word": "vote",
+    "Syllables": [
+      "vote"
+    ]
+  },
+  {
+    "Word": "won't",
+    "Syllables": [
+      "won't"
+    ]
+  },
+  {
+    "Word": "talk",
+    "Syllables": [
+      "talk"
+    ]
+  },
+  {
+    "Word": "ev'ry",
+    "Syllables": [
+      "ev'",
+      "ry"
+    ]
+  },
+  {
+    "Word": "most",
+    "Syllables": [
+      "most"
+    ]
+  },
+  {
+    "Word": "hate",
+    "Syllables": [
+      "hate"
+    ]
+  },
+  {
+    "Word": "woman",
+    "Syllables": [
+      "wom",
+      "an"
+    ]
+  },
+  {
+    "Word": "sitting",
+    "Syllables": [
+      "sit",
+      "ting"
+    ]
+  },
+  {
+    "Word": "fell",
+    "Syllables": [
+      "fell"
+    ]
+  },
+  {
+    "Word": "picked",
+    "Syllables": [
+      "picked"
+    ]
+  },
+  {
+    "Word": "wiped",
+    "Syllables": [
+      "wiped"
+    ]
+  },
+  {
+    "Word": "mine",
+    "Syllables": [
+      "mine"
+    ]
+  },
+  {
+    "Word": "anything",
+    "Syllables": [
+      "an",
+      "y",
+      "thing"
+    ]
+  },
+  {
+    "Word": "ev'rything",
+    "Syllables": [
+      "ev'",
+      "ry",
+      "thing"
+    ]
+  },
+  {
+    "Word": "mothers",
+    "Syllables": [
+      "moth",
+      "ers"
+    ]
+  },
+  {
+    "Word": "billion",
+    "Syllables": [
+      "bil",
+      "lion"
+    ]
+  },
+  {
+    "Word": "brothers",
+    "Syllables": [
+      "bro",
+      "thers"
+    ]
+  },
+  {
+    "Word": "dying",
+    "Syllables": [
+      "dy",
+      "ing"
     ]
   }
 ]

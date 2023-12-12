@@ -9,31 +9,32 @@ namespace SongSyllabicator
 {
     public class Syllabicator
     {
-        private static string[] DictLines=null;
+        private static string[] DictLines = null;
 
+       
 
-        public static GlossaryItem Syllabicate (string Word)
+        public static GlossaryItem Syllabicate(string Word)
         {
-            if(Word.Contains("'"))
+            if (Word.Contains("'"))
             {
                 // Just manually ask the syllables because the website seems to do poorly with contractions
-                Console.WriteLine("Please type out the syllables for the word: ** " + Word  + " ** below, using spaces between each syllable.");
+                Console.WriteLine("Please type out the syllables for the word: ** " + Word + " ** below, using spaces between each syllable.");
                 string Syls = Console.ReadLine();
                 return new GlossaryItem
                 {
-                    Word =  Word,
+                    Word = Word,
                     Syllables = Syls.Split(' ')
                 };
             }
-            
-            else 
+
+            else
             {
                 // Try to get syllables from file
                 string[] syls = SyllablesForWordFromFile(Word);
                 Thread.Sleep(100); // Sleep so that we don't slam the how many syllables website
 
-                if (syls!=null)
-                    return new GlossaryItem {Word=Word, Syllables = syls };
+                if (syls != null)
+                    return new GlossaryItem { Word = Word, Syllables = syls };
 
                 // Try to get the syllables from howmanysyllables.com
                 string url = "https://www.howmanysyllables.com/syllables/" + Word;
@@ -44,14 +45,14 @@ namespace SongSyllabicator
                 if (html.Contains(SyllableInfoCheckString))
                 {
 
-                    var parts = html.Replace (SyllableInfoCheckString, "☯") .Split('☯');
+                    var parts = html.Replace(SyllableInfoCheckString, "☯").Split('☯');
                     string syllables = parts[1].Split('<')[0];
                     return new GlossaryItem
                     {
-                        Word =Word,
+                        Word = Word,
                         Syllables = syllables.Split('-')
                     };
-                }               
+                }
                 else
                 {
                     // https://dictionaryapi.dev/ ?
@@ -80,7 +81,7 @@ namespace SongSyllabicator
             if (DictLines == null)
                 DictLines = File.ReadAllLines("dict-en.txt");
 
-            var Matches = DictLines.Where(x=>x.StartsWith (word+"|")).ToList();
+            var Matches = DictLines.Where(x => x.StartsWith(word + "|")).ToList();
 
             if (Matches.Count != 1)
                 return null;

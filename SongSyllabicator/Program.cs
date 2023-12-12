@@ -11,9 +11,82 @@ namespace SongSyllabicator
 
         static void Main(string[] args)
         {
+
+            //SyllabicateSong(PATH_HERE);
+            //CreateSongSkeleton(PATH_HERE);
+
+        }
+
+        /// <summary>
+        /// Creates a song file of all notes of length 3 that are middle C's
+        /// </summary>
+        /// <param name="LyricsTextPath"></param>
+        public static void CreateSongSkeleton(string LyricsTextPath)
+        {
+            int DEFAULT_SYLLABLE_BEATS = 5;
+
+            List<string> Lines = File.ReadAllLines(LyricsTextPath).ToList();
             Glossary = LoadGlossary();
 
-            string SongPath = "PATH_TO_TXT_FILE_HERE";
+            List<string> Output = new List<string>();
+            int SongCounter = 0;
+
+            foreach (string Line in Lines)
+            {
+                var Words = Line.Split(' ');
+                foreach (var W in Words)
+                {
+                    // Clean up the word
+                    string Word = W.Replace(",", string.Empty).Replace("\"", string.Empty).Replace("?", string.Empty).Replace("!", string.Empty).Replace(".", string.Empty).Replace(";", string.Empty);
+
+                    GlossaryItem Syllabicated = Glossary.SingleOrDefault(x => x.Word == Word.Trim ().ToLower ());
+                    if (Syllabicated == null)
+                    {
+                        Console.WriteLine("Attempting to get syllabication for " + Word.Trim().ToLower());
+                        Syllabicated = Syllabicator.Syllabicate(Word.Trim().ToLower());
+                        Glossary.Add(Syllabicated);
+                        SaveGlossary(Glossary);
+                    }
+
+                    for (int i = 0; i < Syllabicated.Syllables.Length; i++)
+                    {
+                        var ThisSongLine = new SongLine();
+                        ThisSongLine.Starter = ":";
+                        ThisSongLine.StartingTime = SongCounter;
+                        ThisSongLine.NoteLength = DEFAULT_SYLLABLE_BEATS;
+                        ThisSongLine.NoteValue = 12;
+                        ThisSongLine.Syllable = Syllabicated.Syllables[i];
+
+                        if (i == 0 && Word.Substring(0, 1).ToUpper() == Word.Substring(0, 1))
+                        {
+                            // Capitalize this syllable
+                            ThisSongLine.Syllable = ThisSongLine.Syllable.Substring(0, 1).ToUpper() + ThisSongLine.Syllable.Substring(1);
+                        }
+                        if (i == Syllabicated.Syllables.Length - 1)
+                            ThisSongLine.Syllable += " "; // Add a space at the end of the word
+                        Output.Add(ThisSongLine.ToString());
+                        SongCounter += DEFAULT_SYLLABLE_BEATS+1;
+                    }
+
+                }
+
+                SongCounter++;
+                Output.Add(new BreakLine(SongCounter).ToString());
+
+                SongCounter += DEFAULT_SYLLABLE_BEATS*2; // Add more beats for the line break?
+            }
+            Output.Add("E");
+
+            //foreach(var SongLine in Output)
+            //{
+            //    File.AppendAllText(LyricsTextPath.Replace(".txt", ".song.txt"), SongLine.ToString () + Environment.NewLine);
+            //}
+            File.WriteAllLines(LyricsTextPath.Replace(".txt", ".song.txt"), Output);
+        }
+
+        private static void SyllabicateSong(string SongPath)
+        {
+            Glossary = LoadGlossary();
 
             List<string> Output = new List<string>();
             var Lines = File.ReadAllLines(SongPath, System.Text.Encoding.UTF8);
@@ -98,53 +171,6 @@ namespace SongSyllabicator
             // Save the Output
             File.WriteAllLines(SongPath.Replace(".txt", "-syl.txt"), Output, System.Text.Encoding.UTF8);
         }
-
-        //private static GlossaryItem? GetSyllables(SongLine songLine)
-        //{
-        //    GlossaryItem GItem;
-
-        //    // Look up the word and ascertain it
-        //    if (songLine.SyllableWord.Contains("'"))
-        //    {
-        //        // Just manually ask the syllables because the website seems to do poorly with contractions
-        //        Console.WriteLine("Please type out the syllables for the word: " + songLine.SyllableWord + " below, using spaces between each syllable.");
-        //        string Syls = Console.ReadLine();
-        //        GItem = new GlossaryItem
-        //        {
-        //            Word = songLine.SyllableWord,
-        //            Syllables = Syls.Split(' ')
-        //        };
-        //        Glossary.Add(GItem);
-        //        SaveGlossary(Glossary);
-        //    }
-        //    else
-        //    {
-        //        // Check howmanysyllables.com
-        //        try
-        //        {
-        //            Console.WriteLine("Getting syllables for word: " + songLine.SyllableWord);
-
-        //            GItem = Syllabicator.Syllabicate(songLine.SyllableWord);
-        //            Glossary.Add(GItem);
-        //            SaveGlossary(Glossary);
-        //        }
-        //        catch
-        //        {
-        //            // If we don't get an answer from the website, then it's probably already been syllabicated. Just add it and move on.
-        //            GItem = new GlossaryItem
-        //            {
-        //                Word = songLine.SyllableWord,
-        //                Syllables = new string[] { songLine.SyllableWord }
-        //            };
-        //            Glossary.Add(GItem);
-        //            SaveGlossary(Glossary);
-        //        }
-        //        finally
-        //        {
-        //            Thread.Sleep(502); // Sleep so that we don't slam the how many syllables website
-        //        }
-        //    }
-        //}
 
         private static void SaveGlossary(List<GlossaryItem> Glossary)
         {
